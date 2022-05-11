@@ -243,7 +243,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [issues-shield]: https://img.shields.io/github/issues/mehedi8gb/prospectbd.svg?style=for-the-badge
 [issues-url]: https://github.com/mehedi8gb/prospectbd/issues
 [license-shield]: https://img.shields.io/github/license/mehedi8gb/prospectbd.svg?style=for-the-badge
-[license-url]: https://github.com/mehedi8gb/prospectbd/blob/master/LICENSE
+[license-url]: https://github.com/mehedi8gb/prospectbd/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: public/ss.png
