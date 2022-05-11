@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/mehedi8gb/prospectbd">
-    <img src="/public/img/prospectbd.png" alt="Logo" width="80" height="80">
+    <img src="/public/img/prospectbd.png" alt="Logo" height="80">
   </a>
 
   <h3 align="center">ProspectBD</h3>
