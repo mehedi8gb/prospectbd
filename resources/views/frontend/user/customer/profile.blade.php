@@ -21,13 +21,39 @@
               <input type="text" class="form-control" placeholder="Type here...">
             </div>
           </div>
+          @php
+          $userName =  Auth::user()->name;
+      @endphp
           <ul class="navbar-nav justify-content-end">
             <li class="nav-item d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
-                <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">{{ auth()->user()->name }}</span>
-              </a>
-            </li>
+                <a href="javascript:;" class="nav-link text-body font-weight-bold px-0" id="profileSidenav" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-user me-sm-1"></i>
+                  <span class="d-sm-inline d-none">{{ $userName }}</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end mt-1 px-2 me-sm-n4" aria-labelledby="profileSidenav">
+                  <li class="mb-2">
+                    <a class="dropdown-item border-radius-md" href="javascript:;">
+                      <div class="d-flex py-1">
+                        <div class="my-auto">
+                          <img src="public/assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="text-sm font-weight-normal mb-1">
+                            <span class="font-weight-bold">{{ $userName }}</span>
+                          </h6>
+                          <p class="text-xs text-secondary mb-0">
+                            <i class="fa fa-clock me-1"></i>
+
+
+                 {{Carbon\Carbon::parse(\App\Models\session::where('user_id', Auth::user()->id)->first()->last_activity)->diffForHumans(null,true).' ago'}}
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+                </ul>
+              </li>
             <li class="nav-item d-xl-none ps-3 pe-0 d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-white p-0">
                 <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">

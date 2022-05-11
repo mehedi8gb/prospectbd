@@ -3,7 +3,7 @@
 				<div class="container">
 					<div class="logo">
 						<a href="index.html">
-							<img alt="Porto" width="111" height="54" data-sticky-width="82" data-sticky-height="40" src="public/img/logo.png">
+							<img alt="ProspectBD" width="230" height="54" data-sticky-width="82" data-sticky-height="40" src="{{ asset("/img/prospectbd.png") }}">
 						</a>
 					</div>
 					<div class="search">
@@ -275,6 +275,7 @@
 															<li>
 																<form method="POST" action="{{ route('logout') }}">
                                                                     @csrf
+                                                                    @method("POST")
 
                                                                     <a  href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
                                                                         {{ __('Log Out') }}
@@ -342,38 +343,109 @@
                                                             <p class="sign-up-info">Don't have an account yet? <a href="#" id="headerSignUp">Sign Up</a></p>
 
                                                         </div>
-
+<style>
+   .Popup-class {
+/* margin-top: 0px; */
+    }
+</style>
                                                         <div class="signup-form">
                                                             <span class="mega-menu-sub-title">Create Account</span>
 
-                                                            <form action="" id="" method="post">
+
                                                                 <div class="row">
                                                                     <div class="form-group">
                                                                         <div class="col-md-12">
                                                                             <label>E-mail Address</label>
-                                                                            <input type="text" value="" class="form-control input-lg">
+                                                                            <input id="cEmail" type="email" name="email" class="form-control input-lg">
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="form-group">
                                                                         <div class="col-md-6">
-                                                                            <label>Password</label>
-                                                                            <input type="password" value="" class="form-control input-lg">
+                                                                            <label>Name</label>
+                                                                            <input id="cName" type="text" name="name" class="form-control input-lg">
                                                                         </div>
                                                                         <div class="col-md-6">
-                                                                            <label>Re-enter Password</label>
-                                                                            <input type="password" value="" class="form-control input-lg">
+                                                                            <label>Password</label>
+                                                                            <input id="cPassword" type="password" name="password" class="form-control input-lg">
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-md-12">
-                                                                        <input type="submit" value="Create Account" class="btn btn-primary pull-right push-bottom" data-loading-text="Loading...">
+                                                                        <input type="button" id="createAccBtn" class="btn btn-primary pull-right push-bottom" value="Create Account" data-loading-text="Loading...">
                                                                     </div>
                                                                 </div>
-                                                            </form>
 
+@push("js")
+<script>
+$("#createAccBtn").click(function (e) {
+    // e.stopImmediatePropagation();
+    // return false;
+
+    const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+                })
+    let name = $("#cName").val();
+    let email = $("#cEmail").val();
+    let pass = $("#cPassword").val();
+    $.ajax({
+        headers : {
+            'X-CSRF-Token' : '{{ csrf_token() }}'
+        },
+        type: "POST",
+        url: "{{ route("user_store") }}",
+        data: {
+            name : name,
+            email : email,
+            password : pass
+        },
+        success: function (response) {
+            if(response == 1)
+            {
+                Toast.fire({
+                icon: 'success',
+                title: 'Signed in successfully'
+                });
+                location.reload();
+            }
+        },
+        error: function(err) {
+            let margin = 0;
+                // $.each(err.responseJSON.errors, function(key, value) {
+                    // var editCSS = document.createElement('style')
+                    // editCSS.innerHTML = ".Popup-class {margin-top: "+margin+"px;}";
+                    // margin = margin + 70;
+                    // document.body.appendChild(editCSS);
+                Toast.fire({
+                icon: 'error',
+                customClass: {
+                    popup: 'Popup-class'
+                    }
+                ,
+                title: '\
+                <span style="font-size:13px !important">'+ err.responseJSON.errors.email     +'</span> <br>\
+                <span style="font-size:13px !important">'+ err.responseJSON.errors.name   +'</span> <br>\
+                <span style="font-size:13px !important">'+ err.responseJSON.errors.password+'</span>\
+                '
+                })
+                    // });
+                }
+    });
+
+
+});
+</script>
+@endpush
                                                             <p class="log-in-info">Already have an account? <a href="#" id="headerSignIn">Log In</a></p>
                                                         </div>
 

@@ -11,7 +11,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
-
 class RegisteredUserController extends Controller
 {
     /**
@@ -37,14 +36,14 @@ class RegisteredUserController extends Controller
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'password' => ['required'],
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'username' => $request->name,
-            'role_id' => 2,
+            'role_id' => "2",
             'verified' => Carbon::now(),
             'password' => Hash::make($request->password),
         ]);
@@ -52,7 +51,10 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
+if(Auth::check())
+    return 1;
+else
+return 2;
 
-        return redirect(RouteServiceProvider::HOME);
     }
 }

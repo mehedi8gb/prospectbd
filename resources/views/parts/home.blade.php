@@ -60,14 +60,14 @@
                              data-y="280"
                              data-speed="300"
                              data-start="1500"
-                             data-easing="easeOutExpo">WELCOME TO PORTO</div>
+                             data-easing="easeOutExpo">WELCOME TO ProspectBD</div>
 
                         <div class="tp-caption bottom-label sft stb"
                              data-x="center"
                              data-y="338"
                              data-speed="500"
                              data-start="2000"
-                             data-easing="easeOutExpo">The <strong>#1 Selling</strong> HTML Site Template on ThemeForest</div>
+                             data-easing="easeOutExpo">The <strong>#1 IT Company</strong> on Bangladesh</div>
 
 
                     </li>
@@ -101,10 +101,10 @@
             <div class="row center">
                 <div class="col-md-12">
                     <h2 class="short word-rotator-title">
-                        Porto is the <strong>#1 Selling</strong> HTML Site Template on ThemeForest
+                        ProspectBD is the <strong>#1 IT Company</strong> In Bangladesh
                     </h2>
                     <p class="lead">
-                        Trusted by over 13,000 satisfied users, Porto became the best-selling HTML template<br> in the of one of the world's largest MarketPlace.
+                        Trusted by over 100 satisfied users
                     </p>
                 </div>
             </div>
@@ -224,7 +224,7 @@
                 <div class="col-md-7 col-md-offset-1">
                     <h2 class="push-top"><strong>Layout</strong> Styles &amp; Variants</h2>
                     <p class="lead">
-                        There are so many styles you can combine that is possible to create almost any kind of layout based on Porto Template, navigate in our preview and see the header variations, the colors, and the page content types that you will be able to use.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.
                     </p>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.
@@ -394,9 +394,9 @@
                                 </span>
                             </span>
                         </strong>
-                        about Porto Template...
+                        about ProspectBD...
                     </h2>
-                    <p class="lead">13,000+ customers in more than 100 countries use Porto Template.</p>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet hendrerit volutpat. Sed in nunc nec ligula consectetur mollis in vel justo. Vestibulum ante ipsum primis in faucibus orci.</p>
                 </div>
             </div>
             <div class="row center push-top">
@@ -433,7 +433,7 @@
             <div class="container">
                 <div class="row">
                     <div class="center">
-                        <h3>Porto is <strong>everything</strong> you need to create an <strong>awesome</strong> website! <a href="http://themeforest.net/item/porto-responsive-html5-template/4106987" target="_blank" class="btn btn-lg btn-primary" data-appear-animation="bounceIn">Buy Now!</a> <span class="arrow hlb hidden-xs hidden-sm hidden-md" data-appear-animation="rotateInUpLeft" style="top: -22px;"></span></h3>
+                        <h3>ProspectBD is <strong>everything</strong> you need to create an <strong>awesome</strong> website! <a href="#" target="_blank" class="btn btn-lg btn-primary" data-appear-animation="bounceIn">Buy Now!</a> <span class="arrow hlb hidden-xs hidden-sm hidden-md" data-appear-animation="rotateInUpLeft" style="top: -22px;"></span></h3>
                     </div>
                 </div>
             </div>
