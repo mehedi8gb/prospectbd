@@ -140,6 +140,10 @@ and open cmd on the project root folder.
    ```sh
    npm run dev
    ```
+5. Don't forget to run
+   ```sh
+   php artisan migrate
+   ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
