@@ -33,10 +33,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">ProspectBD</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    An awesome IT Company Website!
     <br />
     <a href="https://github.com/mehedi8gb/prospectbd"><strong>Explore the docs »</strong></a>
     <br />
@@ -103,11 +103,11 @@ Use the `BLANK_README.md` to get started.
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
+<!-- * [Next.js](https://nextjs.org/)
+* [React.js](https://reactjs.org/) -->
 * [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
+<!-- * [Angular](https://angular.io/)
+* [Svelte](https://svelte.dev/) -->
 * [Laravel](https://laravel.com)
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
@@ -119,20 +119,19 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
+Follow the instructions to setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+your local machine needs Composer, Nodejs, Xampp/wampp (any)
+**[NodeJS](https://nodejs.org/dist/v16.15.0/node-v16.15.0-x64.msi)**
 * npm
   ```sh
   npm install npm@latest -g
   ```
 
 ### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Install - **[Composer](https://getcomposer.org/Composer-Setup.exe)** on your local machine!
 and open cmd on the project root folder.
@@ -157,14 +156,14 @@ and open cmd on the project root folder.
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+<!-- ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
+ -->
 
 
 <!-- ROADMAP -->
@@ -214,7 +213,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@SK_Mehedi_Hasan](https://facebook.com/mehedi.8gb) - mehidy.gb@gmail.com
+Author - [@SK_Mehedi_Hasan](https://facebook.com/mehedi.8gb) - mehidy.gb@gmail.com
 
 Project Link: [https://github.com/mehedi8gb/prospectbd](https://github.com/mehedi8gb/prospectbd)
 
